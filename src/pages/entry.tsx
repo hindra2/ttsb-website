@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import albumImg from "/album.png";
+import albumGlowImg from "/album-glow.png";
+
 export const EntryPage = () => {
   const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
@@ -20,10 +23,10 @@ export const EntryPage = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <img className="w-200 border-2 border-white" src="/album.png" />
+        <img className="w-200 border-2 border-white" src={albumImg} />
         <motion.img
           className="w-200 border-2 border-white absolute top-0 left-0"
-          src="/album-glow.png"
+          src={albumGlowImg}
           initial={{ opacity: 0 }}
           animate={{ opacity: isHovered ? 1 : 0 }}
           transition={{ duration: 0.3 }}
