@@ -8,63 +8,66 @@ import tiktokLogo from "/logos/tiktok.png";
 import youtubeLogo from "/logos/youtube.png";
 
 const logos = {
-  spotify: spotifyLogo,
-  bandcamp: bandcampLogo,
-  instagram: instagramLogo,
-  tiktok: tiktokLogo,
-  youtube: youtubeLogo,
+    spotify: spotifyLogo,
+    bandcamp: bandcampLogo,
+    instagram: instagramLogo,
+    tiktok: tiktokLogo,
+    youtube: youtubeLogo,
 };
 
 export const MainPage = () => {
-  return (
-    <div
-      className="w-full min-h-screen bg-cover flex flex-col bg-fixed overflow-x-hidden scrollbar-thin"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
-      {/* title */}
-      <div className="flex fixed top-0 bg-black w-full items-center justify-center py-5 z-50">
-        <p className="flex font-title text-8xl text-white">
-          THE TREES SHOUT BACK
-        </p>
-      </div>
+    return (
+        <div
+            className="w-full min-h-screen bg-cover flex flex-col bg-fixed overflow-x-hidden scrollbar-thin"
+            style={{ backgroundImage: `url(${bgImage})` }}
+        >
+            {/* title */}
+            <div className="flex flex-wrap flex-col md:flex-row fixed top-0 bg-black w-full items-center justify-center py-5 z-50 md:gap-4">
+                <p className="font-title md:text-8xl text-5xl text-white">
+                    THE TREES
+                </p>
+                <p className="font-title md:text-8xl text-5xl text-white">
+                    SHOUT BACK
+                </p>
+            </div>
 
-      {/* links */}
-      <div className="flex flex-col space-y-5 gap-2 min-h-screen flex-1 w-screen items-center justify-center">
-        <Link
-          title="Spotify"
-          link="https://open.spotify.com/artist/7b03yztvuP9MJd6y1Yik8f"
-          icon_path={logos.spotify}
-        />
+            {/* links */}
+            <div className="flex flex-col space-y-5 gap-2 min-h-screen flex-1 w-screen items-center justify-center">
+                <Link
+                    title="Spotify"
+                    link="https://open.spotify.com/artist/7b03yztvuP9MJd6y1Yik8f"
+                    icon_path={logos.spotify}
+                />
 
-        <Link
-          title="Bandcamp"
-          link="https://thetreesshoutback.bandcamp.com/album/environmental-storytelling"
-          icon_path={logos.bandcamp}
-        />
+                <Link
+                    title="Bandcamp"
+                    link="https://thetreesshoutback.bandcamp.com/album/environmental-storytelling"
+                    icon_path={logos.bandcamp}
+                />
 
-        <Link
-          title="Instagram"
-          link="https://www.instagram.com/thetreesshoutback?igsh=Njdlam1kc2UwZ3Vp"
-          icon_path={logos.instagram}
-        />
+                <Link
+                    title="Instagram"
+                    link="https://www.instagram.com/thetreesshoutback?igsh=Njdlam1kc2UwZ3Vp"
+                    icon_path={logos.instagram}
+                />
 
-        <Link
-          title="TikTok"
-          link="https://www.tiktok.com/@thetreesshoutback?_r=1&_t=ZT-92oBzyOoHRG"
-          icon_path={logos.tiktok}
-        />
+                <Link
+                    title="TikTok"
+                    link="https://www.tiktok.com/@thetreesshoutback?_r=1&_t=ZT-92oBzyOoHRG"
+                    icon_path={logos.tiktok}
+                />
 
-        <Link
-          title="YouTube"
-          link="https://www.youtube.com/@thetreesshoutback"
-          icon_path={logos.youtube}
-        />
-      </div>
+                <Link
+                    title="YouTube"
+                    link="https://www.youtube.com/@thetreesshoutback"
+                    icon_path={logos.youtube}
+                />
+            </div>
 
-      {/* footer */}
-      <div className="flex justify-center">
-        <img src={"happytree.png"} className="h-48"></img>
-      </div>
-    </div>
-  );
+            {/* footer */}
+            <div className="flex justify-center">
+                <img src={"happytree.png"} className="h-48"></img>
+            </div>
+        </div>
+    );
 };
