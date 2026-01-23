@@ -62,6 +62,19 @@ export const MainPage = () => {
                     link="https://www.youtube.com/@thetreesshoutback"
                     icon_path={logos.youtube}
                 />
+
+                <div className="flex flex-col items-center justify-center font-title">
+                    <p>Want updates on future projects?</p>
+                    <p>
+                        Join our{" "}
+                        <a
+                            href="https://forms.gle/HBmCxDQM9ozyUM1Q8"
+                            className="text-white"
+                        >
+                            mailing list!
+                        </a>
+                    </p>
+                </div>
             </div>
 
             {/* footer */}

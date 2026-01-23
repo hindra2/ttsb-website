@@ -21,7 +21,7 @@ export const EntryPage = () => {
             </div>
 
             <button
-                className="relative hover:cursor-pointer mt-28.5"
+                className="relative hover:cursor-pointer md:mt-20 mt-0"
                 onClick={() => navigate("/home")}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
