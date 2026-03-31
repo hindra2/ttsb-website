@@ -1,8 +1,8 @@
 // App.jsx
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 
 import { MainPage } from "@/pages/mainpage";
-import { EntryPage } from "@/pages/entry";
+// import { EntryPage } from "@/pages/entry";
 
 function App() {
   return (
