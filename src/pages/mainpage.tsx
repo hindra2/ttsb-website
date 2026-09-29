@@ -1,19 +1,14 @@
 import { Link } from "@/components/link";
 import bgImage from "/trees.jpg";
+import { motion } from "motion/react";
 
-import spotifyLogo from "/logos/spotify.png";
-import bandcampLogo from "/logos/bandcamp.png";
-import instagramLogo from "/logos/instagram.png";
-import tiktokLogo from "/logos/tiktok.png";
-import youtubeLogo from "/logos/youtube.png";
-
-const logos = {
-    spotify: spotifyLogo,
-    bandcamp: bandcampLogo,
-    instagram: instagramLogo,
-    tiktok: tiktokLogo,
-    youtube: youtubeLogo,
-};
+import {
+    FaSoundcloud,
+    FaSpotify,
+    FaBandcamp,
+    FaInstagram,
+    FaTiktok,
+} from "react-icons/fa";
 
 export const MainPage = () => {
     return (
@@ -36,43 +31,47 @@ export const MainPage = () => {
                 <Link
                     title="Spotify"
                     link="https://open.spotify.com/artist/7b03yztvuP9MJd6y1Yik8f"
-                    icon_path={logos.spotify}
+                    icon={FaSpotify}
                 />
 
                 <Link
                     title="Bandcamp"
                     link="https://thetreesshoutback.bandcamp.com/album/environmental-storytelling"
-                    icon_path={logos.bandcamp}
+                    icon={FaBandcamp}
                 />
 
                 <Link
                     title="Instagram"
                     link="https://www.instagram.com/thetreesshoutback?igsh=Njdlam1kc2UwZ3Vp"
-                    icon_path={logos.instagram}
+                    icon={FaInstagram}
                 />
 
                 <Link
                     title="TikTok"
                     link="https://www.tiktok.com/@thetreesshoutback?_r=1&_t=ZT-92oBzyOoHRG"
-                    icon_path={logos.tiktok}
+                    icon={FaTiktok}
                 />
 
                 <Link
-                    title="YouTube"
-                    link="https://www.youtube.com/@thetreesshoutback"
-                    icon_path={logos.youtube}
+                    title="Soundcloud"
+                    link="https://soundcloud.com/the-trees-shout-back/"
+                    icon={FaSoundcloud}
                 />
 
                 <div className="flex flex-col items-center justify-center font-title">
                     <p>Want updates on future projects?</p>
                     <p>
                         Join our{" "}
-                        <a
+                        <motion.a
                             href="https://forms.gle/HBmCxDQM9ozyUM1Q8"
-                            className="text-white"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block rounded-md bg-bg px-2 py-0.5 text-black hover:bg-bg/50 border"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.05, ease: "easeOut" }}
                         >
                             mailing list!
-                        </a>
+                        </motion.a>
                     </p>
                 </div>
             </div>
